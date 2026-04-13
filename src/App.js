@@ -180,7 +180,6 @@ function TabSignals({onTrade, portfolio}) {
   }, []);
 
   const traded = portfolio.positions?.map(p => p.ticker) || [];
-  const sectors = ["ALL", ...new Set(signals.map(s => s.sector).filter(Boolean))];
   const SECTOR_MAP = { PLTR:"AI", RBRK:"Cyber", SOUN:"AI/Voice", IONQ:"Quantum",
     HOOD:"Fintech", SMCI:"Infra", CELH:"Consumer", NVDA:"AI", TSLA:"EV",
     META:"Social", AAPL:"Tech", MSFT:"Tech", AMD:"Chips", COIN:"Crypto", CRWD:"Cyber" };
